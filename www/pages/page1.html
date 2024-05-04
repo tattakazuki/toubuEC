@@ -1,0 +1,3020 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>直日常点検表</title>
+    <meta name="viewport" content="width=device-width, initial-gscale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="../components/loader.js"></script>
+    <link rel="stylesheet" href="../components/loader.css">
+    <link rel="stylesheet" href="../css/pagestyle.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <script src="../js/page_savedeta.js"></script>
+    <script src="../components/jquery/dist/jquery.min.js"></script>
+    <script src="../js/share1.js"></script>
+    <script src="../js/del.js"></script>
+</head>
+<header>
+    <div id="popup"><p>保存しました</p></div>
+    <div class="menu">
+    <button id="cameraButton" class="camera">
+    <i class="fa-solid fa-camera fa-2x" style="color:#ddd;"></i>
+    </button>
+    <h2>1直　午前点検</h2>
+    </div><!--ヘッダーが隠れてしまうので-->
+    <button id="menu-btn" class="menu-btn" onclick="link()">
+    <span></span>
+    </button>
+    <div id="menu-content" class="menu-content">
+        <ul>
+            <li><a href="#_4Fcrane" class="anchor" onclick="link()">4F ごみクレーン</a></li>
+            <li><a href="#_4F5F" onclick="link()">4F・5F(高架水槽)</a></li>
+            <li><a href="#_5F" onclick="link()">5F 炉室</a></li>
+            <li><a href="#_4F" onclick="link()">4F 炉室</a></li>
+            <li><a href="#_3F" onclick="link()">3F 炉室</a></li>
+            <li><a href="#before" onclick="link()">前点検</a></li>
+            <li><a href="#_3Fice" onclick="link()">3F 冷凍機室</a></li>
+            <li><a href="#_3Fyard" onclick="link()">3F 復水ヤード</a></li>
+            <li><a href="#_2F" onclick="link()">2F 炉室</a></li>
+            <li><a href="#M1F" onclick="link()">中1F 炉室</a></li>
+            <li><a href="#_1F" onclick="link()">1F 炉室</a></li>
+            <li><a href="#_1Fplatform" onclick="link()">1F プラットホーム</a></li>
+            <li><a href="#outdoors" onclick="link()">屋外</a></li>
+            <li><a href="#B1Fwastewater" onclick="link()">B1F 排水処理室</a></li>
+            <li><a href="#B2F" onclick="link()">B2F</a></li>
+            <li><a href="#B1F" onclick="link()">B1F 炉室</a></li>
+            <li><a href="#share" onclick="link()">メール送信</a></li>
+        </ul>
+    </div>
+</header>
+<body>
+<!------------------------------------------------------------>
+<div id="cmModal" class="cmModal">
+    <div class="cmModalContent">
+        <div class="commentField">
+        <input type="text" id="comment1" class="commentInput" placeholder="コメント１">
+        </div>
+        <div class="commentField">
+        <input type="text" id="comment2" class="commentInput" placeholder="コメント２">
+        </div>
+        <div class="commentField">
+        <input type="text" id="comment3" class="commentInput" placeholder="コメント３">
+        </div>
+        <div class="commentField">
+        <input type="text" id="comment4" class="commentInput" placeholder="コメント４">
+        </div>
+        <div class="commentField">
+        <input type="text" id="comment5" class="commentInput" placeholder="コメント５">
+        </div>
+        <div class="commentField">
+        <input type="text" id="comment6" class="commentInput" placeholder="コメント６">
+        </div>
+        <button class="closeCmModal" onclick="closeCmModal1()">閉じる</button>
+    </div>
+</div>
+<div class="blank"></div>
+<section>
+    <span id="_4Fcrane" class="link"></span>
+    <div class="index">
+        <div>4F  ごみクレーン</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">操作室</h3>
+    <tr>
+        <td class="tenken1">ごみピットの状態</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A100g" value="A100" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A100b" value="A100" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+        <td class="tenken1">放水銃制御盤の状態</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A101g" value="A101" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A101b" value="A101" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <div class="sub">電気室</div>
+    <tr>
+        <td class="tenken1">制御盤の状態</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A102g" value="A102" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A102b" value="A102" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+        <td class="tenken1">抵抗器の状態</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A103g" value="A103" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A103b" value="A103" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+        <td class="tenken1">室温 5~30℃</td>
+        <td class="tenken2"><button id="A104" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+        <div id="A104modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-content-label">
+                    <p>室温　適正値：5～30℃</p>
+                </div>
+                <div class="modal-content-btn">
+                    <button id="A104minus5" class="plmi-btn">-5</button>
+                    <button id="A104minus1" class="plmi-btn">-1</button>
+                    <input type="number" id="A104input" class="plmi-input" min="5" max="30" step="1" value="28">
+                    <span>℃</span>
+                    <button id="A104plus1" class="plmi-btn">+1</button>
+                    <button id="A104plus5" class="plmi-btn">+5</button>
+                </div>
+                <div class="modal-content-btn">
+                    <button id="A104cancel" class="modal-btn cancel-modal">キャンセル</button>
+                    <button id="A104save" class="modal-btn good-modal">保存</button>
+                    <button id="A104error" class="modal-btn bad-modal">異常あり</button>
+                </div>
+            </div>
+        </div>
+        </td>
+        <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A104span">28</span>℃</p>
+        </div>
+        </td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="_4F5F" class="link"></span>
+    <div class="index">
+        <div>4F・5F(高架水槽)</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">高架水槽室</h3>
+    <tr>
+        <td class="tenken1">再利用高架タンク(4F)</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A105g" value="A105" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A105b" value="A105" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+        <td class="tenken1">上水高架タンク</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A106g" value="A106" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A106b" value="A106" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+        <td class="tenken1">プラント高架タンク</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A107g" value="A107" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A107b" value="A107" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+        <td class="tenken1">給湯用膨張タンク</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A108g" value="A108" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A108b" value="A108" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+        <td class="tenken1">暖房用膨張タンク</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A109g" value="A109" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A109b" value="A109" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="_5F" class="link"></span>
+    <div class="index">
+        <div>5F 炉室</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">加熱器</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 蒸気温度<br>230～270℃</td>
+    <td class="tenken2"><button id="A300" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A300modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>蒸気温度　適正値：230～270℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A300minus5" class="plmi-btn">-5</button>
+                <button id="A300minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A300input" class="plmi-input" min="230" max="270" step="1" value="268">
+                <span>℃</span>
+                <button id="A300plus1" class="plmi-btn">+1</button>
+                <button id="A300plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A300cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A300save" class="modal-btn good-modal">保存</button>
+                <button id="A300error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A300span">268</span>℃</p>
+        </div>
+    </td>
+    </tr><tr class="hidden1">
+    <td class="tenken1">1号炉 蒸気圧力<br>1.77～1.96MPa</td>
+    <td class="tenken2"><button id="A301" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A301modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>蒸気圧力　適正値：1.77～1.96MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A301minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A301minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A301input" class="plmi-input" min="1.77" max="1.96" step="0.01" value="1.82">
+                <span>MPa</span>
+                <button id="A301plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A301plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A301cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A301save" class="modal-btn good-modal">保存</button>
+                <button id="A301error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A301span">1.82</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 蒸気温度<br>230～270℃</td>
+    <td class="tenken2"><button id="A400" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+        <div id="A400modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-content-label">
+                    <p>蒸気温度　適正値：230～270℃</p>
+                </div>
+            <div class="modal-content-btn">
+                <button id="A400minus5" class="plmi-btn">-5</button>
+                <button id="A400minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A400input" class="plmi-input" min="230" max="270" step="1" value="268">
+                <span>℃</span>
+                <button id="A400plus1" class="plmi-btn">+1</button>
+                <button id="A400plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">            
+                <button id="A400cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A400save" class="modal-btn good-modal">保存</button>
+                <button id="A400error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A400span">268</span>℃</p>
+        </div>
+    </td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 蒸気圧力<br>1.77～1.96MPa</td>
+    <td class="tenken2">
+    <button id="A401" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A401modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>蒸気圧力　適正値：1.77～1.96MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A401minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A401minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A401input" class="plmi-input" min="1.77" max="1.96" step="0.01" value="1.82">
+                <span>MPa</span>
+                <button id="A401plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A401plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A401cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A401save" class="modal-btn good-modal">保存</button>
+                <button id="A401error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A401span">1.82</span><br>MPa</p>
+        </div>
+    </td>
+    </tr>
+
+    </table><table>
+    <h3 class="sub">ボイラドラム</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 圧力<br>1.77～2.05MPa</td>
+    <td class="tenken2"><button id="A302" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A302modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                    <p>圧力　適正値：1.77～2.05MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A302minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A302minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A302input" class="plmi-input" min="1.77" max="2.05" step="0.01" value="1.88">
+                <span>MPa</span>
+                <button id="A302plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A302plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A302cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A302save" class="modal-btn good-modal">保存</button>
+                <button id="A302error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A302span">1.88</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 圧力<br>1.77～2.05MPa</td>
+    <td class="tenken2"><button id="A402" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A402modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                    <p>圧力　適正値：1.77～2.05MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A402minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A402minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A402input" class="plmi-input" min="1.77" max="2.05" step="0.01" value="1.88">
+                <span>MPa</span>
+                <button id="A402plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A402plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A402cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A402save" class="modal-btn good-modal">保存</button>
+                <button id="A402error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A402span">1.88</span><br>MPa</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+        <h3 class="sub">出口ダンパ電油操作器</h3>            
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 液面の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A303g" value="A303" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A303b" value="A303" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 液面の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A403g" value="A403" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A403b" value="A403" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="_4F" class="link"></span>
+    <div class="index">
+        <div>4F 炉室</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">ボイラドラム</h3>  
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 水面計(カメラ側)<br>-100mm～100mm</td>
+    <td class="tenken2"><button id="A304" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A304modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>水面計(カメラ側)<br>適正値：-100mm～100mm</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A304minus10" class="plmi-btn">-10</button>
+                <button id="A304minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A304input" class="plmi-input" min="-100" max="100" step="1" value="0">
+                <span>mm</span>
+                <button id="A304plus1" class="plmi-btn">+1</button>
+                <button id="A304plus10" class="plmi-btn">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A304cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A304save" class="modal-btn good-modal">保存</button>
+                <button id="A304error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A304span">0</span><br>mm</p>
+        </div>
+    </td>
+    </tr><tr class="hidden1">
+    <td class="tenken1">1号炉 蒸気の漏洩</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A305g" value="A305" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A305b" value="A305" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 水面計(カメラ側)<br>-100mm～100mm</td>
+    <td class="tenken2"><button id="A404" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A404modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>水面計(カメラ側)<br>適正値：-100mm～100mm</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A404minus10" class="plmi-btn">-10</button>
+                <button id="A404minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A404input" class="plmi-input" min="-100" max="100" step="1" value="0">
+                <span>mm</span>
+                <button id="A404plus1" class="plmi-btn">+1</button>
+                <button id="A404plus10" class="plmi-btn">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A404cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A404save" class="modal-btn good-modal">保存</button>
+                <button id="A404error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A404span">0</span><br>mm</p>
+        </div>
+    </td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 蒸気の漏洩</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A405g" value="A405" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A405b" value="A405" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">スートブロワ</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 蒸気の漏洩</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A306g" value="A306" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A306b" value="A306" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 蒸気の漏洩</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A406g" value="A406" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A406b" value="A406" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="_3F" class="link"></span>
+    <div class="index">
+        <div>3F 炉室</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">脱気器</h3>
+    <tr><tr>
+    <td class="tenken1">脱気槽 圧力<br>0.22～0.32MPa</td>
+    <td class="tenken2"><button id="A112" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A112modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>脱気槽 圧力　適正値：0.22～0.32MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A112minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A112minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A112input" class="plmi-input" min="0.22" max="0.32" step="0.01" value="0.23">
+                <span>MPa</span>
+                <button id="A112plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A112plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A112cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A112save" class="modal-btn good-modal">保存</button>
+                <button id="A112error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A112span">0.23</span><br>MPa</p>
+        </div>
+    </td>
+    </tr>
+    <td class="tenken1">貯槽 温度<br>130～150℃</td>
+    <td class="tenken2"><button id="A110" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A110modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                  <p>貯槽 温度　適正値：130～150℃</p>
+            </div>
+            <div class="modal-content-btn">
+                  <button id="A110minus5" class="plmi-btn">-5</button>
+                  <button id="A110minus1" class="plmi-btn">-1</button>
+                  <input type="number" id="A110input" class="plmi-input" min="130" max="150" step="1" value="138">
+                  <span>℃</span>
+                  <button id="A110plus1" class="plmi-btn">+1</button>
+                  <button id="A110plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                  <button id="A110cancel" class="modal-btn cancel-modal">キャンセル</button>
+                  <button id="A110save" class="modal-btn good-modal">保存</button>
+                  <button id="A110error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A110span">138</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">貯槽 レベル範囲内</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A111g" value="A111" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A111b" value="A111" onclick="badSaveDeta(this)">否</button>
+    </td>
+    </tr>
+    </table><table>
+        <p class="sub">環境集じん装置</p>
+    <tr>
+    <td class="tenken1">排出部 粉塵の有無</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A113g" value="A113" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A113b" value="A113" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">本体内外面<br>破損・変形の有無</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A114g" value="A114" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A114b" value="A114" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">制御盤の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A115g" value="A115" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A115b" value="A115" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">低圧蒸気溜</h3>
+    <tr>
+    <td class="tenken1">低圧蒸気溜 圧力<br>0.15～0.47MPa</td>
+    <td class="tenken2"><button id="A116" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A116modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>低圧蒸気溜 圧力<br>適正値：0.15～0.47MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A116minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A116minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A116input" class="plmi-input" min="0.15" max="0.47" step="0.01" value="0.36">
+                <span>MPa</span>
+                <button id="A116plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A116plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A116cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A116save" class="modal-btn good-modal">保存</button>
+                <button id="A116error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+    <div class="number"> 
+        <p class="f13"><span id="A116span">0.36</span><br>MPa</p>
+    </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">低圧蒸気溜 温度<br>130～170℃</td>
+    <td class="tenken2"><button id="A117" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A117modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>低圧蒸気溜 温度<br>適正値：130～170℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A117minus5" class="plmi-btn">-5</button>
+                <button id="A117minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A117input" class="plmi-input" min="130" max="170" step="1" value="155">
+                <span>℃</span>
+                <button id="A117plus1" class="plmi-btn">+1</button>
+                <button id="A117plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A117cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A117save" class="modal-btn good-modal">保存</button>
+                <button id="A117error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+    <div class="number"> 
+        <p class="f14"><span id="A117span">155</span>℃</p>
+    </div>
+    </td>
+    </tr>
+    </table><table>
+    <h3 class="sub">高圧蒸気溜</h3>
+    <tr>
+    <td class="tenken1">高圧蒸気溜 圧力<br>1.75～1.96MPa</td>
+    <td class="tenken2"><button id="A118" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A118modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>高圧蒸気溜 圧力<br>適正値：1.75～1.96MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A118minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A118minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A118input" class="plmi-input" min="1.75" max="1.96" step="0.01" value="1.78">
+                <span>MPa</span>
+                <button id="A118plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A118plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A118cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A118save" class="modal-btn good-modal">保存</button>
+                <button id="A118error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A118span">1.78</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">高圧蒸気溜 温度<br>220～260℃</td>
+    <td class="tenken2"><button id="A119" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A119modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>高圧蒸気溜 温度<br>適正値：220～260℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A119minus5" class="plmi-btn">-5</button>
+                <button id="A119minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A119input" class="plmi-input" min="220" max="260" step="1" value="225">
+                <span>℃</span>
+                <button id="A119plus1" class="plmi-btn">+1</button>
+                <button id="A119plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A119cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A119save" class="modal-btn good-modal">保存</button>
+                <button id="A119error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A119span">225</span>℃</p>
+        </div>
+    </td>
+    </tr>
+    </table><table class="hidden1">
+    <h3 class="sub">1号炉二次燃焼空気送風機</h3>
+    <tr>
+    <td class="tenken1">送風機電流 25A以下</td>
+    <td class="tenken2"><button id="A307" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A307modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>送風機電流　適正値：25A以下</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A307minus5" class="plmi-btn">-5</button>
+                <button id="A307minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A307input" class="plmi-input" min="0" max="25" step="1" value="16">
+                <span>A</span>
+                <button id="A307plus1" class="plmi-btn">+1</button>
+                <button id="A307plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A307cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A307save" class="modal-btn good-modal">保存</button>
+                <button id="A307error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A307span">16</span>A</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">軸受温度 モータ側<br>70℃以下(シールが白色)</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A308g" value="A308" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A308b" value="A308" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">軸受温度 ファン側<br>70℃以下(シール白色)</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A309g" value="A309" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A309b" value="A309" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">電油操作器<br>油面の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A310g" value="A310" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A310b" value="A310" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table class="hidden2">
+    <h3 class="sub hidden2">2号炉二次燃焼空気送風機</h3>
+    <tr>
+    <td class="tenken1">送風機電流 25A以下</td>
+    <td class="tenken2"><button id="A407" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A407modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>送風機電流　適正値：25A以下</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A407minus5" class="plmi-btn">-5</button>
+                <button id="A407minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A407input" class="plmi-input" min="0" max="25" step="1" value="16">
+                <span>A</span>
+                <button id="A407plus1" class="plmi-btn">+1</button>
+                <button id="A407plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A407cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A407save" class="modal-btn good-modal">保存</button>
+                <button id="A407error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A407span">16</span>A</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">軸受温度 モータ側<br>70℃以下(シールが白色)</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A408g" value="A408" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A408b" value="A408" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">軸受温度 ファン側<br>70℃以下(シール白色)</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A409g" value="A409" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A409b" value="A409" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">電油操作器<br>油面の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A410g" value="A410" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A410b" value="A410" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">スートブロワ</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 蒸気の漏洩No.①,②,⑤</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A311g" value="A311" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A311b" value="A311" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 蒸気の漏洩No.①,②,⑤</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A411g" value="A411" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A411b" value="A411" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">高温水熱交換器</h3>
+    <tr>
+    <td class="tenken1">蒸気圧力<br>0.47MPa以下</td>
+    <td class="tenken2"><button id="A120" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A120modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>蒸気圧力　適正値：0.47MPa以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A120minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A120minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A120input" class="plmi-input" min="0" max="0.47" step="0.01" value="0.16">
+                <span>MPa</span>
+                <button id="A120plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A120plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A120cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A120save" class="modal-btn good-modal">保存</button>
+                <button id="A120error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+    <div class="number"> 
+        <p class="f13"><span id="A120span">0.16</span><br>MPa</p>
+    </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">蒸気温度<br>120～170℃</td>
+    <td class="tenken2"><button id="A121" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A121modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>蒸気温度　適正値：120～170℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A121minus5" class="plmi-btn">-5</button>
+                <button id="A121minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A121input" class="plmi-input" min="120" max="170" step="1" value="139">
+                <span>℃</span>
+                <button id="A121plus1" class="plmi-btn">+1</button>
+                <button id="A121plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A121cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A121save" class="modal-btn good-modal">保存</button>
+                <button id="A121error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A121span">139</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">高温水温度<br>120～140℃</td>
+    <td class="tenken2"><button id="A122" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A122modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>高温水温度　適正値：120～140℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A122minus5" class="plmi-btn">-5</button>
+                <button id="A122minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A122input" class="plmi-input" min="120" max="140" step="1" value="135">
+                <span>℃</span>
+                <button id="A122plus1" class="plmi-btn">+1</button>
+                <button id="A122plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A122cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A122save" class="modal-btn good-modal">保存</button>
+                <button id="A122error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A122span">135</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">高温水圧力<br>0.39MPa以下</td>
+    <td class="tenken2"><button id="A123" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A123modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>高温水圧力　適正値：0.39MPa以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A123minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A123minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A123input" class="plmi-input" min="0" max="0.39" step="0.01" value="0.19">
+                <span>MPa</span>
+                <button id="A123plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A123plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A123cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A123save" class="modal-btn good-modal">保存</button>
+                <button id="A123error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A123span">0.19</span><br>MPa</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <h3 class="sub">高温水タンク</h3>
+    <tr>
+    <td class="tenken1">高温水レベル</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A124g" value="A124" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A124b" value="A124" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">高温水温度<br>120～140℃</td>
+    <td class="tenken2"><button id="A125" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A125modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>高温水温度　適正値：120～140℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A125minus5" class="plmi-btn">-5</button>
+                <button id="A125minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A125input" class="plmi-input" min="120" max="140" step="1" value="130">
+                <span>℃</span>
+                <button id="A125plus1" class="plmi-btn">+1</button>
+                <button id="A125plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A125cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A125save" class="modal-btn good-modal">保存</button>
+                <button id="A125error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A125span">130</span>℃</p>
+        </div>
+    </td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="before" class="link"></span>
+    <div class="index">
+        <div>前点検</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">前点検</h3>
+    <tr>
+    <td class="tenken1">不使用箇所の消灯確認<br>(赤印スイッチ)</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A126g" value="A126" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A126b" value="A126" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="_3Fice" class="link"></span>
+    <div class="index">
+        <div>3F 冷凍機室</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">蒸気主管</h3>
+    <tr>
+    <td class="tenken1">2次側 蒸気圧力<br>0.08～0.12MPa</td>
+    <td class="tenken2"><button id="A127" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A127modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>2次側 蒸気圧力　適正値：0.08～0.12MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A127minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A127minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A127input" class="plmi-input" min="0.08" max="0.12" step="0.01" value="0.11">
+                <span>MPa</span>
+                <button id="A127plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A127plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A127cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A127save" class="modal-btn good-modal">保存</button>
+                <button id="A127error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A127span">0.11</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">2次側 蒸気温度<br>110～145℃</td>
+    <td class="tenken2">
+    <button id="A128" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A128modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>2次側 蒸気温度　適正値：110～145℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A128minus5" class="plmi-btn">-5</button>
+                <button id="A128minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A128input" class="plmi-input" min="110" max="145" step="1" value="140">
+                <span>℃</span>
+                <button id="A128plus1" class="plmi-btn">+1</button>
+                <button id="A128plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A128cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A128save" class="modal-btn good-modal">保存</button>
+                <button id="A128error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A128span">140</span>℃</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <div class="flex">
+    <h3 class="sub">冷凍機(運転時)</h3>
+    <button class="stopbtn" onclick="coolStop()">停止中ココ押す</button>
+    </div>
+    <tr>
+    <td class="tenken1">冷水 往側温水<br>15℃以下</td>
+    <td class="tenken2"><button id="A129" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A129modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>冷水 往側温水　適正値：15℃以下</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A129minus5" class="plmi-btn">-5</button>
+                <button id="A129minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A129input" class="plmi-input" min="0" max="15" step="1" value="11">
+                <span>℃</span>
+                <button id="A129plus1" class="plmi-btn">+1</button>
+                <button id="A129plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A129cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A129save" class="modal-btn good-modal">保存</button>
+                <button id="A129error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A129span">11</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">冷却水 往側温水<br>35℃以下</td>
+    <td class="tenken2"><button id="A130" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A130modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>冷却水 往側温水　適正値：35℃以下</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A130minus5" class="plmi-btn">-5</button>
+                <button id="A130minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A130input" class="plmi-input" min="0" max="35" step="1" value="29">
+                <span>℃</span>
+                <button id="A130plus1" class="plmi-btn">+1</button>
+                <button id="A130plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A130cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A130save" class="modal-btn good-modal">保存</button>
+                <button id="A130error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A130span">29</span>℃</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <div class="flex">
+    <h3 class="sub">暖房用熱交換器(運転時)</h3>
+    <button class="stopbtn" onclick="heatStop()">停止中ココ押す</button>
+    </div>
+    <tr>
+    <td class="tenken1">温水温度 50～60℃</td>
+    <td class="tenken2"><button id="A131" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A131modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>温水温度　適正値：50～60℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A131minus5" class="plmi-btn">-5</button>
+                <button id="A131minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A131input" class="plmi-input" min="50" max="60" step="1" value="50">
+                <span>℃</span>
+                <button id="A131plus1" class="plmi-btn">+1</button>
+                <button id="A131plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A131cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A131save" class="modal-btn good-modal">保存</button>
+                <button id="A131error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A131span">50</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">蒸気圧力<br>0.1MPa以下</td>
+    <td class="tenken2"><button id="A132" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A132modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>蒸気圧力　適正値：0.1MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A132minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A132minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A132input" class="plmi-input" min="0" max="0.1" step="0.01" value="0.07">
+                <span>MPa</span>
+                <button id="A132plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A132plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A132cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A132save" class="modal-btn good-modal">保存</button>
+                <button id="A132error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A132span">0.07</span><br>MPa</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <h3 class="sub">給湯用熱交換器</h3>
+    <tr class="tablestyle">
+    <td class="tenken1">温水温度 45～65℃</td>
+    <td class="tenken2"><button id="A133" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A133modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>温水温度　適正値：45～65℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A133minus5" class="plmi-btn">-5</button>
+                <button id="A133minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A133input" class="plmi-input" min="45" max="65" step="1" value="54">
+                <span>℃</span>
+                <button id="A133plus1" class="plmi-btn">+1</button>
+                <button id="A133plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A133cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A133save" class="modal-btn good-modal">保存</button>
+                <button id="A133error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A133span">54</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">蒸気圧力<br>0.1MPa以下</td>
+    <td class="tenken2"><button id="A134" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A134modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>蒸気圧力　適正値：0.1MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A134minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A134minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A134input" class="plmi-input" min="0" max="0.1" step="0.01" value="0.1">
+                <span>MPa</span>
+                <button id="A134plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A134plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A134cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A134save" class="modal-btn good-modal">保存</button>
+                <button id="A134error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A134span">0.1</span><br>MPa</p>
+        </div>
+    </td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="_3Fyard" class="link"></span>
+    <div class="index">
+        <div>3F 復水ヤード</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">排気復水タンク</h3>
+    <tr>
+    <td class="tenken1">レベル</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A135g" value="A135" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A135b" value="A135" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">温度 60～80℃</td>
+    <td class="tenken2"><button id="A136" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A136modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>温度　適正値：60～80℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A136minus5" class="plmi-btn">-5</button>
+                <button id="A136minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A136input" class="plmi-input" min="60" max="80" step="1" value="68">
+                <span>℃</span>
+                <button id="A136plus1" class="plmi-btn">+1</button>
+                <button id="A136plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A136cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A136save" class="modal-btn good-modal">保存</button>
+                <button id="A136error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A136span">68</span>℃</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <h3 class="sub">復水タンク</h3>
+    <tr>
+    <td class="tenken1">レベル</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A137g" value="A137" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A137b" value="A137" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">アキュムレータ</h3>
+    <tr>
+    <td class="tenken1">レベル</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A138g" value="A138" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A138b" value="A138" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">圧力<br>0.88～1.86MPa</td>
+    <td class="tenken2"><button id="A139" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A139modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>圧力　適正値：0.88～1.86MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A139minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A139minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A139input" class="plmi-input" min="0.88" max="1.86" step="0.01" value="1.76">
+                <span>MPa</span>
+                <button id="A139plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A139plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A139cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A139save" class="modal-btn good-modal">保存</button>
+                <button id="A139error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A139span">1.76</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">温度 150～250℃</td>
+    <td class="tenken2"><button id="A140" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A140modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>温度　適正値：150～250℃</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A140minus5" class="plmi-btn">-5</button>
+                <button id="A140minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A140input" class="plmi-input" min="150" max="250" step="1" value="200">
+                <span>℃</span>
+                <button id="A140plus1" class="plmi-btn">+1</button>
+                <button id="A140plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A140cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A140save" class="modal-btn good-modal">保存</button>
+                <button id="A140error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A140span">200</span>℃</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <h3 class="sub">純水タンク</h3>
+    <tr>
+    <td class="tenken1">レベル</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A141g" value="A141" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A141b" value="A141" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+        <h3 class="sub">プラント用冷却塔</h3>
+    <tr>
+    <td class="tenken1">入口側冷却水温度45℃以下</td>
+    <td class="tenken2"><button id="A142" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A142modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>入口側冷却水温度<br>適正値：45℃以下</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A142minus5" class="plmi-btn">-5</button>
+                <button id="A142minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A142input" class="plmi-input" min="0" max="45" step="1" value="30">
+                <span>℃</span>
+                <button id="A142plus1" class="plmi-btn">+1</button>
+                <button id="A142plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A142cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A142save" class="modal-btn good-modal">保存</button>
+                <button id="A142error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A142span">30</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">出口側冷却水温度35℃以下</td>
+    <td class="tenken2"><button id="A143" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A143modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>出口側冷却水温度<br>適正値：35℃以下</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A143minus5" class="plmi-btn">-5</button>
+                <button id="A143minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A143input" class="plmi-input" min="0" max="35" step="1" value="29">
+                <span>℃</span>
+                <button id="A143plus1" class="plmi-btn">+1</button>
+                <button id="A143plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A143cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A143save" class="modal-btn good-modal">保存</button>
+                <button id="A143error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A143span">29</span>℃</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <h3 class="sub">冷凍機冷却塔</h3>       
+    <tr>
+    <td class="tenken1">補給水流量読計読み<br>(冷凍機運転時)</td>
+    <td class="tenken2"><button id="A144" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A144modal" class="modal">
+        <div class="modal-content">
+           <div class="modal-content-label">
+                <p>補給水流量計読み</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A144minus1" class="plmi-btn">-1</button>
+                <button id="A144minus01" class="plmi-btn">-0.1</button>
+                <input type="number" id="A144input" class="plmi-input" min="0" max="9999.9" step="0.1" value="9746.7">
+                <span>m3</span>
+                <button id="A144plus01" class="plmi-btn">+0.1</button>
+                <button id="A144plus1" class="plmi-btn">+1</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A144cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A144save" class="modal-btn good-modal">保存</button>
+                <button id="A144error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f12"><span id="A144span">9746.7</span><br>m3</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <h3 class="sub">タービン排気復水器(低圧復水器:LC)</h3>
+    <tr>
+    <td class="tenken1">復水器異常音 No.1</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A145g" value="A145" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A145b" value="A145" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">復水器異常音 No.2</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A146g" value="A146" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A146b" value="A146" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">復水器異常音 No.3</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A147g" value="A147" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A147b" value="A147" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">復水器異常音 No.4</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A148g" value="A148" onclick="goodSaveDeta(this)">良</button>
+    </td><td class="tenken3">
+    <button  class="good_bad_button" type="button" id="A148b" value="A148" onclick="badSaveDeta(this)">否</button>
+    </td>
+    </tr><tr>
+    <td class="tenken1">復水器異常音 No.5</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A149g" value="A149" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A149b" value="A149" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">復水器異常音 No.6</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A150g" value="A150" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A150b" value="A150" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">蒸気の漏洩</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A151g" value="A151" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A151b" value="A151" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1 f13">入口蒸気圧力<br>-0.0879 ～ -0.0533MPa</td>
+    <td class="tenken2"><button id="A152" class="good_bad_button" type="button" value="0.0001" onclick="modalwindow(this)">未</button>
+    <div id="A152modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>入口蒸気圧力<br>適正値：-0.0879～-0.0533MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A152minus0001" class="plmi-btn decimal">-10</button>
+                <button id="A152minus00001" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A152input" class="plmi-input" min="-0.0879" max="-0.0533" step="0.01" value="-0.0879">
+                <span>MPa</span>
+                <button id="A152plus00001" class="plmi-btn decimal">+1</button>
+                <button id="A152plus0001" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A152cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A152save" class="modal-btn good-modal">保存</button>
+                <button id="A152error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f10"><span id="A152span">-0.0879</span><br>MPa</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <h3 class="sub">高圧蒸気復水器(高圧復水器:HC)</h3>
+    <tr>
+    <td class="tenken1">復水器異常音 No.1</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A153g" value="A153" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A153b" value="A153" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">復水器異常音 No.2</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A154g" value="A154" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A154b" value="A154" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">蒸気の漏洩</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A155g" value="A155" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A155b" value="A155" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">入口蒸気圧力No.1 1.96MPa以下</td>
+    <td class="tenken2"><button id="A156" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A156modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>入口蒸気圧力No.1<br>適正値：1.96MPa以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A156minus01" class="plmi-btn decimal">-0.1</button>
+                <button id="A156minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A156input" class="plmi-input" min="-1.00" max="1.96" step="0.01" value="-0.07">
+                <span>MPa</span>
+                <button id="A156plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A156plus01" class="plmi-btn decimal">+0.1</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A156cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A156save" class="modal-btn good-modal">保存</button>
+                <button id="A156error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A156span">-0.07</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">入口蒸気圧力No.2 1.96MPa以下</td>
+    <td class="tenken2"><button id="A157" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A157modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>入口蒸気圧力No.2<br>適正値：1.96MPa以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A157minus01" class="plmi-btn decimal">-0.1</button>
+                <button id="A157minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A157input" class="plmi-input" min="-1.00" max="1.96" step="0.01" value="-0.07">
+                <span>MPa</span>
+                <button id="A157plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A157plus01" class="plmi-btn decimal">+0.1</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A157cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A157save" class="modal-btn good-modal">保存</button>
+                <button id="A157error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A157span">-0.07</span><br>MPa</p>
+        </div>
+    </td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="_2F" class="link"></span>
+    <div class="index">
+        <div>2F 炉室</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <div class="sub">No.2ボイラダスト返送コンベア</div>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 電流計1.8A以下</td>
+    <td class="tenken2"><button id="A314" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A314modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流計　適正値：1.8A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A314minus01" class="plmi-btn decimal">-0.1</button>
+                <button id="A314minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A314input" class="plmi-input" min="0" max="1.80" step="0.01" value="1.34">
+                <span>A</span>
+                <button id="A314plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A314plus01" class="plmi-btn decimal">+0.1</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A314cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A314save" class="modal-btn good-modal">保存</button>
+                <button id="A314error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f12"><span id="A314span">1.34</span>A</p>
+        </div>
+    </td>
+    </tr><tr class="hidden1">
+        <td class="tenken1">1号炉 灰の状態</td>
+        <td class="tenken2"><button  class="good_bad_button" type="button" id="A315g" value="A315" onclick="goodSaveDeta(this)">良</button></td>
+        <td class="tenken3"><button  class="good_bad_button" type="button" id="A315b" value="A315" onclick="badSaveDeta(this)">否</button></td>
+        </tr><tr class="hidden2">
+        <td class="tenken1">2号炉 電流計1.8A以下</td>
+        <td class="tenken2"><button id="A414" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+        <div id="A414modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-content-label">
+                    <p>電流計　適正値：1.8A以下</p>
+                </div>
+            <div class="modal-content-btn">                
+                <button id="A414minus01" class="plmi-btn decimal">-0.1</button>
+                <button id="A414minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A414input" class="plmi-input" min="0" max="1.8" step="0.1" value="1.34">
+                <span>A</span>
+                <button id="A414plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A414plus01" class="plmi-btn decimal">+0.1</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A414cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A414save" class="modal-btn good-modal">保存</button>
+                <button id="A414error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+        <td class="tenken3">
+            <div class="number"> 
+                <p class="f12"><span id="A414span">1.34</span>A</p>
+            </div>
+        </td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 灰の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A415g" value="A415" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A415b" value="A415" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">水冷ジャケット(上)</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 水タンクレベル</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A312g" value="A312" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A312b" value="A312" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 水タンクレベル</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A412g" value="A412" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A412b" value="A412" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <div class="sub">水冷ジャケット(下)</div>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 水タンクレベル</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A313g" value="A313" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A313b" value="A313" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 水タンクレベル</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A413g" value="A413" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A413b" value="A413" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <div class="sub">ごみ汚水ろ過器</div>
+    <tr>
+    <td class="tenken1">No.2 汚水の漏洩</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A158g" value="A158" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A158b" value="A158" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">フィーダ下シュート</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 堆積物の有無</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A316g" value="A316" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A316b" value="A316" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 堆積物の有無</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A416g" value="A416" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A416b" value="A416" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">炉室送風機</h3>
+    <tr>
+    <td class="tenken1">No.1電流計 95A以下</td>
+    <td class="tenken2"><button id="A159" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A159modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流計　適正値：95A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A159minus5" class="plmi-btn decimal">-5</button>
+                <button id="A159minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A159input" class="plmi-input" min="0" max="95" step="1" value="0">
+                <span>A</span>
+                <button id="A159plus1" class="plmi-btn decimal">+1</button>
+                <button id="A159plus5" class="plmi-btn decimal">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A159cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A159save" class="modal-btn good-modal">保存</button>
+                <button id="A159error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A159span">0</span>A</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">No.2電流計 95A以下</td>
+    <td class="tenken2">
+    <button id="A160" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A160modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流計　適正値：95A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A160minus5" class="plmi-btn decimal">-5</button>
+                <button id="A160minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A160input" class="plmi-input" min="0" max="95" step="1" value="0">
+                <span>A</span>
+                <button id="A160plus1" class="plmi-btn decimal">+1</button>
+                <button id="A160plus5" class="plmi-btn decimal">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A160cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A160save" class="modal-btn good-modal">保存</button>
+                <button id="A160error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A160span">0</span>A</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <h3 class="sub">ボイラダスト搬出コンベア</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 No.1電流計 1.6A以下</td>
+    <td class="tenken2"><button id="A317" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A317modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流計　適正値：1.6A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A317minus05" class="plmi-btn decimal">-0.5</button>
+                <button id="A317minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A317input" class="plmi-input" min="0" max="1.6" step="0.1" value="1.2">
+                <span>A</span>
+                <button id="A317plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A317plus05" class="plmi-btn decimal">+0.5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A317cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A317save" class="modal-btn good-modal">保存</button>
+                <button id="A317error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A317span">1.2</span>A</p>
+        </div>
+    </td>
+    </tr><tr class="hidden1">
+    <td class="tenken1">1号炉 No.2電流計 1.6A以下</td>
+    <td class="tenken2"><button id="A318" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A318modal" class="modal">
+        <div class="modal-content">
+           <div class="modal-content-label">
+                <p>電流計　適正値：1.6A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A318minus05" class="plmi-btn decimal">-0.5</button>
+                <button id="A318minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A318input" class="plmi-input" min="0" max="1.6" step="0.1" value="1.0">
+                <span>A</span>
+                <button id="A318plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A318plus05" class="plmi-btn decimal">+0.5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A318cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A318save" class="modal-btn good-modal">保存</button>
+                <button id="A318error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A318span">1.0</span>A</p>
+        </div>
+    </td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 No.1電流計 1.6A以下</td>
+    <td class="tenken2"><button id="A417" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A417modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流計　適正値：1.6A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A417minus05" class="plmi-btn decimal">-0.5</button>
+                <button id="A417minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A417input" class="plmi-input" min="0" max="1.6" step="0.1" value="1.2">
+                <span>A</span>
+                <button id="A417plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A417plus05" class="plmi-btn decimal">+0.5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A417cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A417save" class="modal-btn good-modal">保存</button>
+                <button id="A417error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A417span">1.2</span>A</p>
+        </div>
+    </td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 No.2電流計 1.6A以下</td>
+    <td class="tenken2"><button id="A418" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A418modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流計　適正値：1.6A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A418minus05" class="plmi-btn decimal">-0.5</button>
+                <button id="A418minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A418input" class="plmi-input" min="0" max="1.6" step="0.1" value="1.0">
+                <span>A</span>
+                <button id="A418plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A418plus05" class="plmi-btn decimal">+0.5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A418cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A418save" class="modal-btn good-modal">保存</button>
+                <button id="A418error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A418span">1.0</span>A</p>
+        </div>
+    </td>
+    </tr>
+    </table><table>
+    <div class="flex">
+    <h3 class="sub">ごみ汚水噴霧装置</h3>
+    </div>
+    <tr class="hidden1">
+    <td class="tenken1">
+    1号炉 動作確認 
+    <button class="stopbtn f12" onclick="gomiStop1()">停止中ココ押す</button>
+    </td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A319g" value="A319" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button class="good_bad_button" type="button" id="A319b" value="A319" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">
+    2号炉 動作確認 
+    <button class="stopbtn f12" onclick="gomiStop2()">停止中ココ押す</button>
+    </td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A419g" value="A419" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A419b" value="A419" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="M1F" class="link"></span>
+    <div class="index">
+        <div>中1F 炉室</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">フィーダ下水洗浄管</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 堆積物の有無</td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A320g" value="A320" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button class="good_bad_button" type="button" id="A320b" value="A320" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 堆積物の有無</td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A420g" value="A420" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button class="good_bad_button" type="button" id="A420b" value="A420" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table class="hidden1">
+    <h3 class="sub hidden1">1号炉燃焼空気量制御装置</h3>
+    <tr>
+    <td class="tenken1">フィーダ後進端位置 設定値</td>
+    <td class="tenken2"><button id="A327" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A327modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ後進端位置 設定値</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A327minus10" class="plmi-btn decimal">-10</button>
+                <button id="A327minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A327input" class="plmi-input" min="0" max="700" step="1" value="428">
+                <span>mm</span>
+                <button id="A327plus1" class="plmi-btn decimal">+1</button>
+                <button id="A327plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A327cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A327save" class="modal-btn good-modal">保存</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A327span">428</span><br>mm</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ後進端位置 実数値</td>
+    <td class="tenken2"><button id="A328" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A328modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ後進端位置 実数値</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A328minus10" class="plmi-btn decimal">-10</button>
+                <button id="A328minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A328input" class="plmi-input" min="0" max="700" step="1" value="428">
+                <span>mm</span>
+                <button id="A328plus1" class="plmi-btn decimal">+1</button>
+                <button id="A328plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A328cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A328save" class="modal-btn good-modal">保存</button>
+                <button id="A328error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A328span">428</span><br>mm</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">燃焼空気圧力<br>300～500mmAq</td>
+    <td class="tenken2"><button id="A321" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A321modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>燃焼空気圧力<br>適正値：300～500mmAq</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A321minus10" class="plmi-btn decimal">-10</button>
+                <button id="A321minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A321input" class="plmi-input" min="200" max="500" step="1" value="260">
+                <span>mmAq</span>
+                <button id="A321plus1" class="plmi-btn decimal">+1</button>
+                <button id="A321plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A321cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A321save" class="modal-btn good-modal">保存</button>
+                <button id="A321error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A321span">260</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.1<br>30mmAq以上</td>
+    <td class="tenken2"><button id="A322" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A322modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：30mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A322minus10" class="plmi-btn decimal">-10</button>
+                <button id="A322minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A322input" class="plmi-input" min="30" max="500" step="1" value="50">
+                <span>mmAq</span>
+                <button id="A322plus1" class="plmi-btn decimal">+1</button>
+                <button id="A322plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A322cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A322save" class="modal-btn good-modal">保存</button>
+                <button id="A322error" class="modal-btn bad-modal">異常あり</button>
+            <div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A322span">50</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.2<br>100mmAq以上</td> 
+    <td class="tenken2">
+    <button id="A323" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A323modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：100mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A323minus10" class="plmi-btn decimal">-10</button>
+                <button id="A323minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A323input" class="plmi-input" min="30" max="500" step="1" value="70">
+                <span>mmAq</span>
+                <button id="A323plus1" class="plmi-btn decimal">+1</button>
+                <button id="A323plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A323cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A323save" class="modal-btn good-modal">保存</button>
+                <button id="A323error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A323span">70</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.3<br>100mmAq以上</td>
+    <td class="tenken2"><button id="A324" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A324modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：100mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A324minus10" class="plmi-btn decimal">-10</button>
+                <button id="A324minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A324input" class="plmi-input" min="30" max="500" step="1" value="80">
+                <span>mmAq</span>
+                <button id="A324plus1" class="plmi-btn decimal">+1</button>
+                <button id="A324plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A324cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A324save" class="modal-btn good-modal">保存</button>
+                <button id="A324error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A324span">80</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.4<br>30mmAq以上</td>
+    <td class="tenken2"><button id="A325" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A325modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：30mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A325minus10" class="plmi-btn decimal">-10</button>
+                <button id="A325minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A325input" class="plmi-input" min="30" max="500" step="1" value="80">
+                <span>mmAq</span>
+                <button id="A325plus1" class="plmi-btn decimal">+1</button>
+                <button id="A325plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A325cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A325save" class="modal-btn good-modal">保存</button>
+                <button id="A325error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A325span">80</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.5<br>30mmAq以上</td>
+    <td class="tenken2"><button id="A326" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A326modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：30mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A326minus10" class="plmi-btn decimal">-10</button>
+                <button id="A326minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A326input" class="plmi-input" min="30" max="500" step="1" value="50">
+                <span>mmAq</span>
+                <button id="A326plus1" class="plmi-btn decimal">+1</button>
+                <button id="A326plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A326cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A326save" class="modal-btn good-modal">保存</button>
+                <button id="A326error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A326span">50</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr>
+    </table><table class="hidden2">
+    <div class="sub hidden2">2号炉燃焼空気量制御装置</div>
+    <tr>
+    <td class="tenken1">フィーダ後進端位置 設定値</td>
+    <td class="tenken2"><button id="A427" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A427modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ後進端位置 設定値</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A427minus10" class="plmi-btn decimal">-10</button>
+                <button id="A427minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A427input" class="plmi-input" min="0" max="700" step="1" value="428">
+                <span>mm</span>
+                <button id="A427plus1" class="plmi-btn decimal">+1</button>
+                <button id="A427plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A427cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A427save" class="modal-btn good-modal">保存</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A427span">428</span><br>mm</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ後進端位置 実数値</td>
+    <td class="tenken2"><button id="A428" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A428modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ後進端位置 実数値</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A428minus10" class="plmi-btn decimal">-10</button>
+                <button id="A428minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A428input" class="plmi-input" min="0" max="700" step="1" value="428">
+                <span>mm</span>
+                <button id="A428plus1" class="plmi-btn decimal">+1</button>
+                <button id="A428plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A428cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A428save" class="modal-btn good-modal">保存</button>
+                <button id="A428error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A428span">428</span><br>mm</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">燃焼空気圧力<br>300～500mmAq</td>
+    <td class="tenken2"><button id="A421" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A421modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>燃焼空気圧力<br>適正値：300～500mmAq</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A421minus10" class="plmi-btn decimal">-10</button>
+                <button id="A421minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A421input" class="plmi-input" min="300" max="500" step="1" value="300">
+                <span>mmAq</span>
+                <button id="A421plus1" class="plmi-btn decimal">+1</button>
+                <button id="A421plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A421cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A421save" class="modal-btn good-modal">保存</button>
+                <button id="A421error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A421span">300</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.1<br>30mmAq以上</td>
+    <td class="tenken2"><button id="A422" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A422modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：30mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A422minus10" class="plmi-btn decimal">-10</button>
+                <button id="A422minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A422input" class="plmi-input" min="30" max="500" step="1" value="50">
+                <span>mmAq</span>
+                <button id="A422plus1" class="plmi-btn decimal">+1</button>
+                <button id="A422plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A422cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A422save" class="modal-btn good-modal">保存</button>
+                <button id="A422error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A422span">50</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.2<br>100mmAq以上</td> 
+    <td class="tenken2"><button id="A423" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A423modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：100mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A423minus10" class="plmi-btn decimal">-10</button>
+                <button id="A423minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A423input" class="plmi-input" min="30" max="500" step="1" value="70">
+                <span>mmAq</span>
+                <button id="A423plus1" class="plmi-btn decimal">+1</button>
+                <button id="A423plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A423cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A423save" class="modal-btn good-modal">保存</button>
+                <button id="A423error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A423span">70</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.3<br>100mmAq以上</td>
+    <td class="tenken2"><button id="A424" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A424modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：100mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A424minus10" class="plmi-btn decimal">-10</button>
+                <button id="A424minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A424input" class="plmi-input" min="30" max="500" step="1" value="80">
+                <span>mmAq</span>
+                <button id="A424plus1" class="plmi-btn decimal">+1</button>
+                <button id="A424plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A424cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A424save" class="modal-btn good-modal">保存</button>
+                <button id="A424error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A424span">80</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr>
+    <tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.4<br>30mmAq以上</td>
+    <td class="tenken2"><button id="A425" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A425modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：30mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A425minus10" class="plmi-btn decimal">-10</button>
+                <button id="A425minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A425input" class="plmi-input" min="30" max="500" step="1" value="80">
+                <span>mmAq</span>
+                <button id="A425plus1" class="plmi-btn decimal">+1</button>
+                <button id="A425plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A425cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A425save" class="modal-btn good-modal">保存</button>
+                <button id="A425error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A425span">80</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">フィーダ下風箱圧力 No.5<br>30mmAq以上</td>
+    <td class="tenken2"><button id="A426" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A426modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>フィーダ下風箱圧力<br>適正値：30mmAq以上</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A426minus10" class="plmi-btn decimal">-10</button>
+                <button id="A426minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A426input" class="plmi-input" min="30" max="500" step="1" value="50">
+                <span>mmAq</span>
+                <button id="A426plus1" class="plmi-btn decimal">+1</button>
+                <button id="A426plus10" class="plmi-btn decimal">+10</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A426cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A426save" class="modal-btn good-modal">保存</button>
+                <button id="A426error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A426span">50</span><br><span class="f12">mmAq</span></p>
+        </div>
+    </td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="_1F" class="link"></span>
+    <div class="index">
+        <div>1F 炉室</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+<table>
+    <h3 class="sub">No.1ボイラダスト返送コンベア</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 電流計1.9A以下</td>
+    <td class="tenken2"><button id="A331" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A331modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流計　適正値：1.9A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A331minus05" class="plmi-btn decimal">-0.5</button>
+                <button id="A331minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A331input" class="plmi-input" min="0" max="1.9" step="0.1" value="1.2">
+                <span>A</span>
+                <button id="A331plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A331plus05" class="plmi-btn decimal">+0.5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A331cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A331save" class="modal-btn good-modal">保存</button>
+                <button id="A331error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A331span">1.2</span>A</p>
+        </div>
+    </td>
+    </tr><tr class="hidden1">
+    <td class="tenken1">1号炉 灰の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A332g" value="A332" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A332b" value="A332" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 電流計1.9A以下</td>
+    <td class="tenken2"><button id="A431" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A431modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流計　適正値：1.9A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A431minus05" class="plmi-btn decimal">-0.5</button>
+                <button id="A431minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A431input" class="plmi-input" min="0" max="1.9" step="0.1" value="1.2">
+                <span>A</span>
+                <button id="A431plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A431plus05" class="plmi-btn decimal">+0.5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A431cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A431save" class="modal-btn good-modal">保存</button>
+                <button id="A431error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A431span">1.2</span>A</p>
+        </div>
+    </td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 灰の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A432g" value="A432" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A432b" value="A432" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">焼却炉</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 燃焼状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A333g" value="A333" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A333b" value="A333" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 燃焼状態</td>
+    <td class="tenken2">
+    <button  class="good_bad_button" type="button" id="A433g" value="A433" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A433b" value="A433" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">シフティング装置</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 エアーシリンダーの状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A329g" value="A329" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A329b" value="A329" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 エアーシリンダーの状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A429g" value="A429" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A429b" value="A429" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">自動給油装置</h3>
+    <tr class="hidden1">
+    <td class="tenken1">1号炉 グリースの量</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A330g" value="A330" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A330b" value="A330" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr class="hidden2">
+    <td class="tenken1">2号炉 グリースの量</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A430g" value="A430" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A430b" value="A430" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="_1Fplatform" class="link"></span>
+    <div class="index">
+        <div>1F プラットホーム</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">ダンピングボックス室</h3>
+    <tr>
+    <td class="tenken1">異常の有無</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A161g" value="A161" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A161b" value="A161" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <div class="flex">
+    <h3 class="sub">投入扉駆動装置<br>1～3投入扉用(左側)</h3>
+    <button class="stopbtn" onclick="gateStop()">停止中ココ押す</button>
+    </div>
+    <tr>
+    <td class="tenken1">吐出圧9.0～11.0MPa</td>
+    <td class="tenken2"><button id="A162" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A162modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>吐出圧　適正値：9.0～11.0MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A162minus05" class="plmi-btn decimal">-0.5</button>
+                <button id="A162minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A162input" class="plmi-input" min="9.0" max="11.0" step="0.01" value="9.5">
+                <span>MPa</span>
+                <button id="A162plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A162plus05" class="plmi-btn decimal">+0.5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A162cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A162save" class="modal-btn good-modal">保存</button>
+                <button id="A162error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A162span">9.5</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">油温55℃以下</td>
+    <td class="tenken2"><button id="A163" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A163modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>油温　適正値：55℃以下</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A163minus5" class="plmi-btn">-5</button>
+                <button id="A163minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A163input" class="plmi-input" min="0" max="55" step="1" value="31">
+                <span>℃</span>
+                <button id="A163plus1" class="plmi-btn">+1</button>
+                <button id="A163plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A163cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A163save" class="modal-btn good-modal">保存</button>
+                <button id="A163error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A163span">31</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">油面状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A164g" value="A164" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A164b" value="A164" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <div class="flex">
+    <h3 class="sub">投入扉駆動装置<br>4～6投入扉用(右側)</h3>
+    <button class="stopbtn" onclick="gateStop2()">停止中ココ押す</button>
+    </div>
+    <tr>
+    <td class="tenken1">吐出圧9.0～11.0MPa</td>
+    <td class="tenken2"><button id="A165" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A165modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>吐出圧　適正値：9.0～11.0MPa</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A165minus05" class="plmi-btn decimal">-0.5</button>
+                <button id="A165minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A165input" class="plmi-input" min="9.0" max="11.0" step="0.01" value="9.5">
+                <span>MPa</span>
+                <button id="A165plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A165plus05" class="plmi-btn decimal">+0.5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A165cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A165save" class="modal-btn good-modal">保存</button>
+                <button id="A165error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A165span">9.5</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">油温55℃以下</td>
+    <td class="tenken2"><button id="A166" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A166modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>油温　適正値：55℃以下</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A166minus5" class="plmi-btn">-5</button>
+                <button id="A166minus1" class="plmi-btn">-1</button>
+                <input type="number" id="A166input" class="plmi-input" min="0" max="55" step="1" value="31">
+                <span>℃</span>
+                <button id="A166plus1" class="plmi-btn">+1</button>
+                <button id="A166plus5" class="plmi-btn">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A166cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A166save" class="modal-btn good-modal">保存</button>
+                <button id="A166error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p><span id="A166span">31</span>℃</p>
+        </div>
+    </td>
+    </tr>
+    <tr>
+    <td class="tenken1">油面状態</td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A167g" value="A167" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button class="good_bad_button" type="button" id="A167b" value="A167" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">プラットホーム各扉</h3>
+    <tr>
+    <td class="tenken1">異常の有無</td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A168g" value="A168" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button class="good_bad_button" type="button" id="A168b" value="A168" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">廃油置場</h3>
+    <tr>
+    <td class="tenken1">漏油状態</td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A169g" value="A169" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button class="good_bad_button" type="button" id="A169b" value="A169" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="outdoors" class="link"></span>
+    <div class="index">
+        <div>屋外</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">トラックスケール</h3>
+    <tr>
+    <td class="tenken1">入口側 異常の有無</td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A170g" value="A170" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button class="good_bad_button" type="button" id="A170b" value="A170" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">出口側 異常の有無</td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A171g" value="A171" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A171b" value="A171" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">計算機室</h3>
+    <tr>
+    <td class="tenken1">入口・出口計量器ゼロ確認</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A172g" value="A172" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A172b" value="A172" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">洗車装置</h3>
+    <tr>
+    <td class="tenken1">異常の有無</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A173g" value="A173" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A173b" value="A173" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="B1Fwastewater" class="link"></span>
+    <div class="index">
+        <div>B1F 排水処理室</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">消臭・消毒装置</h3>
+    <tr>
+    <td class="tenken1">異常の有無</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A174g" value="A174" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A174b" value="A174" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">排水処理設備</h3>
+    <tr>
+    <td class="tenken1">塩酸 原液タンクの漏洩等</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A175g" value="A175" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A175b" value="A175" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">塩酸 希釈タンクの漏洩等</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A176g" value="A176" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A176b" value="A176" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">塩酸 配管・バルブ等の漏洩等</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A177g" value="A177" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A177b" value="A177" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">苛性ソーダ 貯留タンクの漏洩等</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A178g" value="A178" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A178b" value="A178" onclick="badSaveDeta(this)">否</button></td>
+    </tr><tr>
+    <td class="tenken1">苛性ソーダ 配管・バルブ等の漏洩等</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A179g" value="A179" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A179b" value="A179" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">無機沈殿槽</h3>
+    <tr>
+    <td class="tenken1">濁り</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A180g" value="A180" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A180b" value="A180" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">ごみ汚水貯留タンク</h3>
+    <tr>
+    <td class="tenken1">レベル</td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A181g" value="A181" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button class="good_bad_button" type="button" id="A181b" value="A181" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table>
+    <h3 class="sub">ごみ汚水噴霧ポンプ室</h3>    
+    <tr>
+    <td class="tenken1">異常の有無</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A182g" value="A182" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A182b" value="A182" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="B2F" class="link"></span>
+    <div class="index">
+        <div>B2F</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table>
+    <h3 class="sub">排水処理設備</h3>
+    <tr>
+    <td class="tenken1">撹拌ブロワ号機1or2</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A183g" value="A183" onclick="toggle1(this)">1</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A183b" value="A183" onclick="toggle2(this)">2</button></td>
+    </tr><tr>
+    <td class="tenken1">吐出圧0.05MPa以下</td>
+    <td class="tenken2"><button id="A184" class="good_bad_button" type="button" value="0.01" onclick="modalwindow(this)">未</button>
+    <div id="A184modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>吐出圧　適正値：0.05MPa以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A184minus005" class="plmi-btn decimal">-0.05</button>
+                <button id="A184minus001" class="plmi-btn decimal">-0.01</button>
+                <input type="number" id="A184input" class="plmi-input" min="0" max="0.10" step="0.01" value="0.05">
+                <span>MPa</span>
+                <button id="A184plus001" class="plmi-btn decimal">+0.01</button>
+                <button id="A184plus005" class="plmi-btn decimal">+0.05</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A184cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A184save" class="modal-btn good-modal">保存</button>
+                <button id="A184error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A184span">0.05</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">ごみ汚水移送ポンプ室の異常</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A185g" value="A185" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A185b" value="A185" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+<!------------------------------------------------------------->
+<section>
+    <span id="B1F" class="link"></span>
+    <div class="index">
+        <div>B1F 炉室</div>
+        <button class="commentBtn" onclick="openCmModal1()">コメント</button>
+    </div>
+    <table class="hidden1">
+    <h3 class="sub hidden1">1号炉ストーカ駆動油圧装置</h3>
+    <tr>
+    <td class="tenken1">吐出圧10.0～13.0MPa</td>
+    <td class="tenken2"><button id="A334" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A334modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>吐出圧　適正値：10.0～13.0MPa</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A334minus1" class="plmi-btn">-1</button>
+                <button id="A334minus01" class="plmi-btn">-0.1</button>
+                <input type="number" id="A334input" class="plmi-input" min="10" max="13" step="0.1" value="12">
+                <span>MPa</span>
+                <button id="A334plus01" class="plmi-btn">+0.1</button>
+                <button id="A334plus1" class="plmi-btn">+1</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A334cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A334save" class="modal-btn good-modal">保存</button>
+                <button id="A334error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A334span">12</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">油温50℃以下</td>
+    <td class="tenken2"><button id="A335" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A335modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>油温　適正値：50℃以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A335minus5" class="plmi-btn decimal">-5</button>
+                <button id="A335minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A335input" class="plmi-input" min="0" max="50" step="1" value="41">
+                <span>℃</span>
+                <button id="A335plus1" class="plmi-btn decimal">+1</button>
+                <button id="A335plus5" class="plmi-btn decimal">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A335cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A335save" class="modal-btn good-modal">保存</button>
+                <button id="A335error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A335span">41</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">油面の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A336g" value="A336" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A336b" value="A336" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table class="hidden2">
+    <h3 class="sub hidden2">2号炉ストーカ駆動油圧装置</h3>
+    <tr>
+    <td class="tenken1">吐出圧10.0～13.0MPa</td>
+    <td class="tenken2"><button id="A434" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A434modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>吐出圧　適正値：10.0～13.0MPa</p>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A434minus1" class="plmi-btn">-1</button>
+                <button id="A434minus01" class="plmi-btn">-0.1</button>
+                <input type="number" id="A434input" class="plmi-input" min="10" max="13" step="0.1" value="12">
+                <span>MPa</span>
+                <button id="A434plus01" class="plmi-btn">+0.1</button>
+                <button id="A434plus1" class="plmi-btn">+1</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A434cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A434save" class="modal-btn good-modal">保存</button>
+                <button id="A434error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f13"><span id="A434span">12</span><br>MPa</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">油温50℃以下</td>
+    <td class="tenken2"><button id="A435" class="good_bad_button" type="button" value="1" onclick="modalwindow(this)">未</button>
+    <div id="A435modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>油温　適正値：50℃以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A435minus5" class="plmi-btn decimal">-5</button>
+                <button id="A435minus1" class="plmi-btn decimal">-1</button>
+                <input type="number" id="A435input" class="plmi-input" min="0" max="50" step="1" value="40">
+                <span>℃</span>
+                <button id="A435plus1" class="plmi-btn decimal">+1</button>
+                <button id="A435plus5" class="plmi-btn decimal">+5</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A435cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A435save" class="modal-btn good-modal">保存</button>
+                <button id="A435error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A435span">40</span>℃</p>
+        </div>
+    </td>
+    </tr><tr>
+    <td class="tenken1">油面の状態</td>
+    <td class="tenken2"><button class="good_bad_button" type="button" id="A436g" value="A436" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button class="good_bad_button" type="button" id="A436b" value="A436" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table class="hidden1">
+    <h3 class="sub hidden1">1号電油操作器押込送風機</h3>
+    <tr>
+    <td class="tenken1">油面の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A337g" value="A337" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A337b" value="A337" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table class="hidden2">
+    <h3 class="sub hidden2">2号電油操作器押込送風機</h3>
+    <tr>
+    <td class="tenken1">油面の状態</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A437g" value="A437" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A437b" value="A437" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table class="hidden1">
+    <h3 class="sub hidden1">1号炉振動コンベア</h3>
+    <tr>
+    <td class="tenken1">電流 9A以下</td>
+    <td class="tenken2"><button id="A338" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A338modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流　適正値：9A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A338minus1" class="plmi-btn decimal">-1</button>
+                <button id="A338minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A338input" class="plmi-input" min="0" max="9" step="1" value="2.9">
+                <span>A</span>
+                <button id="A338plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A338plus1" class="plmi-btn decimal">+1</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A338cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A338save" class="modal-btn good-modal">保存</button>
+                <button id="A338error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A338span">2.9</span>A</p>
+        </div>
+    </td>
+    </tr>
+    </table><table class="hidden2">
+    <h3 class="sub hidden2">2号炉振動コンベア</h3>
+    <tr>
+    <td class="tenken1">電流 9A以下</td>
+    <td class="tenken2"><button id="A438" class="good_bad_button" type="button" value="0.1" onclick="modalwindow(this)">未</button>
+    <div id="A438modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-label">
+                <p>電流　適正値：9A以下</p>
+            </div>
+            <div class="modal-content-btn">                
+                <button id="A438minus1" class="plmi-btn decimal">-1</button>
+                <button id="A438minus01" class="plmi-btn decimal">-0.1</button>
+                <input type="number" id="A438input" class="plmi-input" min="0" max="9" step="1" value="9">
+                <span>A</span>
+                <button id="A438plus01" class="plmi-btn decimal">+0.1</button>
+                <button id="A438plus1" class="plmi-btn decimal">+1</button>
+            </div>
+            <div class="modal-content-btn">
+                <button id="A438cancel" class="modal-btn cancel-modal">キャンセル</button>
+                <button id="A438save" class="modal-btn good-modal">保存</button>
+                <button id="A438error" class="modal-btn bad-modal">異常あり</button>
+            </div>
+        </div>
+    </div>
+    </td>
+    <td class="tenken3">
+        <div class="number"> 
+            <p class="f14"><span id="A438span">9</span>A</p>
+        </div>
+    </td>
+    </tr>
+    </table><table class="hidden1">
+    <h3 class="sub hidden1">1号炉灰押出装置</h3>
+    <tr>
+    <td class="tenken1">水位・詰まり等</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A339g" value="A339" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A339b" value="A339" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table><table class="hidden2">
+    <h3 class="sub hidden2">2号炉灰押出装置</h3>
+    <tr>
+    <td class="tenken1">水位・詰まり等</td>
+    <td class="tenken2"><button  class="good_bad_button" type="button" id="A439g" value="A439" onclick="goodSaveDeta(this)">良</button></td>
+    <td class="tenken3"><button  class="good_bad_button" type="button" id="A439b" value="A439" onclick="badSaveDeta(this)">否</button></td>
+    </tr>
+    </table>
+</section>
+</div> <!-- スクロールスナップ --->
+<div style="text-align:center;">
+<button onClick ="share()" class="fa-solid fa-share-alt fa-2x" id="share" style="padding:20px; color:blue;"> メール送信</button>
+<div>
+</body>
+    <script src="../js/page_modal.js"></script>
+    <script src="../js/page_hamburger.js"></script>
+</html>

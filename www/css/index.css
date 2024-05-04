@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-image: url("istockphoto-1275682432-612x612.jpg");
+  background-color:#ddd;
+  width:100%;
+  height:97vh;
+  margin: 0 auto;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.apptitle {
+    text-align: center;
+    text-stroke: 1px #000;
+    -webkit-text-stroke: 1px #000;
+    color: #eee;
+    background:repeating-linear-gradient(45deg, rgb(189, 217, 241) ,rgb(189, 217, 241) 1px, #eee 0,#eee 2px);
+    box-shadow: 2px 2px #111;
+    margin:20px;
+}
+
+.title {
+  margin:0px auto;
+  width:50%;
+  background:repeating-linear-gradient(45deg, #eee ,#eee 1px, #fff 0,#fff 2px);
+  text-align: center;
+  border-radius: 10px;
+  padding: 1px;
+  border:skyblue 2px inset;
+}
+
+table {
+  margin-top: 30px;
+  margin-left: 7%;
+  margin-right: 8%;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 85%;
+  height: 300px;
+}
+
+.td1 {
+  width: 40%;
+}
+
+.td2 {
+  width: 60%;
+}
+
+label {
+  background:repeating-linear-gradient(45deg, #eee ,#eee 1px, #fff 0,#fff 2px);
+  font-weight: lighter;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border:skyblue 2px inset;
+}
+
+input {
+  border:skyblue 2px inset;
+  width:67%;
+  height:30px;
+  font-size: 18px;
+}
+
+.fav {
+  border:skyblue 2px inset;
+  background-color: #fff;
+  width: 35%;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px #111;
+}
+
+select, option {
+  border:skyblue 2px inset;
+  cursor: pointer;
+  width:80%;
+  height:30px;
+}
+
+.startbtn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  width:150px;
+  height:50px;
+  color:#000;
+  font-size: 18px;
+  background-color:lightgreen;
+  border-radius: 5px;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(120, 238, 120);
+}
+
+.delete {
+  background-color: rgb(250, 123, 176);
+}
+
+.delete:hover {
+  background-color: rgb(250, 101, 163);
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f13 {
+  font-size: 13px;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.f10 {
+  font-size: 10px;
+}
+
+/*mediaquery*/
+@media screen and (min-width: 700px)  {
+  /* ここにタブレット向けのCSSスタイルを指定します */
+  body {
+    font-size: 20px;
+  }
+
+.startbtn {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+select, option {
+  border:skyblue 2px inset;
+  cursor: pointer;
+  width:80%;
+  height:40px;
+  font-size:100%;
+}
+
+}

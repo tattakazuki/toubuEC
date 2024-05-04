@@ -1,0 +1,579 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color:burlywood;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden; /* HTML横スクロール無効化 */ 
+}
+
+h2 {
+  color:#eee;
+  text-stroke: 1px #000;
+  -webkit-text-stroke: 1px #000;
+}
+
+.index {
+    width:100%;
+    height:40px;
+    text-align: center;
+    border:2px solid;
+    background: linear-gradient(45deg, rgb(253, 157, 123), rgb(248, 202, 85));
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub {
+    padding:4px 4px 4px 15px;
+    color: #555;
+    margin:10px 0px 0px 0px;
+    width: auto;
+    height:40px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.stopbtn {
+  color: #000;
+  font-weight: bold;
+  background-color:rgb(248, 212, 212);
+  padding: 10px 10px; /*ボタンサイズ*/
+  border-radius: 5px;
+  border: 2px solid;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.stopbtn:hover {
+  background-color:rgb(238, 202, 202);
+}
+
+.stopbtn:hover {
+  background-color:rgb(238, 202, 202);
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f13 {
+  font-size: 13px;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.f10 {
+  font-size: 10px;
+}
+
+section {
+  background-image:url("image.png");
+}
+
+section:nth-child(odd) {
+  background-color: #eee;
+  background-blend-mode: overlay;
+}
+
+section:nth-child(even) {
+  background-color: #9ec;
+  background-blend-mode: overlay;
+}
+
+.tenken1 {
+  width:100%;
+  height:60px;
+  padding:0px 5px;
+}
+
+.tenken2 {
+  width:15%;
+  height:60px;
+  padding:0px 5px;
+}
+
+.tenken3 {
+  width:15%;
+  height:60px;
+  padding:0px 5px;
+}
+
+.tekisei {
+  text-align:center;
+  margin:0px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse:collapse;
+  width:100%;
+  height:100%;
+}
+
+td {
+  border: 2px solid;
+  border-color: #ddd;
+}
+
+/* 奇数行のスタイル */
+tr:nth-child(odd) {
+  background-color: #eec;
+}
+
+/* 偶数行のスタイル */
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+/*良否ボタン*/
+.good_bad_button {
+  color: #000;
+  font-weight: bold;
+  background-color:#fff;
+  padding: 10px 10px; /*ボタンサイズ*/
+  margin-left:auto; /*セル上のボタンの位置*/
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.good_bad_button:hover {
+  color: #000;
+  background-color: #ddd;
+  padding: 10px 10px;
+  margin-left:auto;
+  margin-right:auto;
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+} 
+
+.goodactive {
+  background-color:#0f0;
+}
+
+.goodactive:hover {
+  background-color:#0d0;
+}
+
+.badactive {
+  background-color:#f00;
+}
+
+.badactive:hover {
+  background-color:#d00;
+}
+
+.good {
+  background-color:#C8E6C9;
+}
+
+.bad {
+  background-color:#FFCDD2;
+}
+
+.message {
+  background-color: white;
+}
+
+.number {
+  width: 2em;
+}
+
+.next {
+  margin: 10px;
+  text-align: center;
+}
+
+.finish_btn {
+  padding:50px 100px;
+}
+
+.button {
+  text-decoration: none;
+  padding:10px;
+  color:#111;
+  background-color:lightgreen;
+  border-radius: 5px;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.camera {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width:40px;
+    height:40px;
+    background-color: #222;
+    text-align: center;
+    z-index: 99;
+}
+
+/*ハンバーガーメニュー*/
+.menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #aaa;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #222;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 12px;
+}
+.menu-btn span:after {
+    top: 12px;
+}
+
+.menu-btn.active span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+.menu-btn.active span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+.menu-btn.active span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background: linear-gradient(45deg, #A48455, #358455);
+    transition: all 0.2s;/*アニメーション設定*/
+}
+.menu-content ul {
+    padding: 40px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #fff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#fff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+.menu-content.active {
+    left: 0;
+}
+
+.blank {
+    height: 50px;
+    background-color: #0d0;
+    border:2px;
+}
+
+/*リンク先調整*/
+span.link {
+position: relative;
+top: -50px;/*左の数値を変えると、上下に調整します*/
+display: block;
+}
+
+
+/*モーダルウインドウ*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 80% auto;/*モーダル縦方向の位置*/
+  padding: 20px;
+  border: 1px solid #888;
+  width: 86%;
+  max-width: 600px;
+}
+
+.modal-content-label {
+  text-align: center;
+}
+
+.modal-content-btn {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.plmi-btn {
+  width: 40px;
+  height: 30px;
+  background-color: #e0e0e0;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.decimal {
+  font-size: 14px;
+}
+
+.plmi-btn:hover {
+  background-color: #ccc;
+}
+
+.modal-btn {
+  width: 80px;
+  height: 40px;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cancel-modal {
+  background-color: #aaf;
+  font-size: 12px;
+}
+
+.cancel-modal:hover {
+  background-color: #ccf;
+}
+
+.good-modal {
+  background-color: #afa;
+}
+
+.good-modal:hover {
+  background-color: #cfc;
+}
+
+.bad-modal {
+  background-color: #faa;
+}
+
+.bad-modal:hover {
+  background-color: #fcc;
+}
+
+.plmi-input {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.plmi-input::-webkit-inner-spin-button,
+.plmi-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.plmi-input:focus {
+  outline: none;
+  border-color: #999;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    width:50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: #656565;
+    color: #fefefe;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* 初期状態で非表示 */
+    transition: opacity 0.3s ease-in-out; /* トランジションを追加 */
+}
+
+/*コメントモーダル*/
+
+.commentBtn {
+  color: #000;
+  font-weight: bold;
+  background-color:rgb(248, 212, 212);
+  padding: 5px 5px; /*ボタンサイズ*/
+  border-radius: 5px;
+  border: 2px solid;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.commentBtn:hover {
+  background-color:rgb(238, 202, 202);
+}
+
+.cmModal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.showCmModal {
+    display: block;
+}
+
+.cmModalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height:80%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 5% 10%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.commentInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px #111 inset;
+    height:32px;
+}
+
+.commentField {
+    margin-bottom: 5px;
+}
+
+.closeCmModal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid;
+    cursor: pointer;
+    background-color:rgb(248, 212, 212);
+    color: #000;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.closeCmModal:hover {
+  background-color:rgb(238, 202, 202);
+}
+
+/*メディアクエリー*/
+@media (min-width: 700px) {
+ .index {
+  background-color: goldenrod;
+ }
+
+ .modal-content {
+  margin: 50% auto;
+ }
+
+.commentInput {
+  height:48px;
+}
+
+}
+

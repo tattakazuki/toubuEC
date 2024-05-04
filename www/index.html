@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="components/loader.js"></script>
+    <script src="js/start.js"></script>
+</head>
+<body>
+    <div class="apptitle">
+        <h2>東部環境エネルギーセンター</h2>
+        <h2>直日常点検アプリ</h2>
+    </div>
+    <div>
+        <h2 class="title">基本情報入力</h2>
+    </div>
+    <table>
+    <tr>
+        <td class="td1">
+            <label for="name">点　検　者</label>
+        </td>
+        <td class="td2">
+            <input type="text" id="name" placeholder="名前">
+            <!--button class="fav" onclick="favReg()">
+                <i id="star" class="fa-regular fa-star" style="color: yellow;"><span id="favTxt" style="color:#111;"> 登録</span></i>
+            </button-->
+        </td>
+    </tr>
+    <tr>
+        <td class="td1">
+            <label for="ampm">点 検 箇 所</label>
+        </td>
+        <td class="td2">
+            <select id="ampm">
+                <option value="" selected hidden></option>
+                <option>午前</option>
+                <option>午後</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="td1">
+            <label for="weather">　天　候　</label>
+        </td>
+        <td class="td2">
+            <select id="weather">
+                <option value="" selected hidden></option>
+                <option>晴れ</option>
+                <option>曇り</option>
+                <option>雨</option>
+                <option>雪</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="td1">
+            <label for="guard">　　直　　</label>
+        </td>
+        <td class="td2">
+            <select id="guard">
+                <option value="" selected hidden></option>
+                <option>1直</option>
+                <option>2直</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="td1">
+            <label for="furnace">炉稼働状況</label>
+        </td>
+        <td class="td2">
+            <select id="furnace">
+                <option value="" selected hidden></option>
+                <option>1号稼働＝2号休炉</option>
+                <option>2号稼働＝1号休炉</option>
+                <option>両方稼働＝休炉無し</option>
+            </select>
+        </td>
+    </tr>
+    </table>
+    <div class="startbtn">
+        <input type="button" class="button" value="点検をはじめる" onclick="start()">
+    </div>
+    <div class="startbtn">
+        <input type="button" class="button delete" value="データ消去" onclick="del()">
+    </div>
+    <!--div>
+     <div class="link">
+        <a href="pages/page1.html" class="button">Page1</a>
+     </div>
+     <div class="link">
+        <a href="pages/page2.html" class="button">Page2</a>
+     </div>
+    </div-->
+</body>
+
+</html>
